@@ -24,7 +24,7 @@ def load_lstm():
 def load_gru():
     from tensorflow.keras.models import load_model
     tok = joblib.load(GRU_DIR / "tokenizer.joblib")
-    mdl = load_model(str(GRU_DIR / "model_final.h5"))
+    mdl = load_model(str(GRU_DIR / "model_final.keras"))
     return tok, mdl
 
 @st.cache_resource
