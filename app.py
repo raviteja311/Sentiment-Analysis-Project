@@ -17,7 +17,7 @@ def load_lr():
 def load_lstm():
     from tensorflow.keras.models import load_model
     tok = joblib.load(LSTM_DIR / "tokenizer.joblib")
-    mdl = load_model(str(LSTM_DIR / "model_final.h5"))
+    mdl = load_model(str(LSTM_DIR / "model_final.keras"))
     return tok, mdl
 
 @st.cache_resource
